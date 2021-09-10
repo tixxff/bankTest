@@ -10,12 +10,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { WalletEditComponent } from './components/wallet-edit/wallet-edit.component';
 import { TopUpComponent } from './components/top-up/top-up.component';
+import { TranferComponent } from './components/tranfer/tranfer.component';
+import { StatementComponent } from './components/statement/statement.component';
 
 const appRoutes: Routes = [
   
   { path: '', component:WalletsComponent },
   { path: 'edit/:id', component:WalletEditComponent},
-  { path: 'top-up', component:TopUpComponent }
+  { path: 'top-up', component:TopUpComponent },
+  { path: 'tranfer', component:TranferComponent },
+  { path: 'staement', component:StatementComponent }
 ];
 
 @NgModule({
@@ -24,7 +28,9 @@ const appRoutes: Routes = [
     WalletsComponent,
     NavbarComponent,
     WalletEditComponent,
-    TopUpComponent
+    TopUpComponent,
+    TranferComponent,
+    StatementComponent
   ],
   imports: [
     BrowserModule,
