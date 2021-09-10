@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   { path: 'edit/:id', component:WalletEditComponent},
   { path: 'top-up', component:TopUpComponent },
   { path: 'tranfer', component:TranferComponent },
-  { path: 'staement', component:StatementComponent }
+  { path: 'statement', component:StatementComponent }
 ];
 
 @NgModule({
