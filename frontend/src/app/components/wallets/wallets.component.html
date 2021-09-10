@@ -1,0 +1,44 @@
+<form (ngSubmit)="insertData()">
+
+    <div class="form-group">
+        <label for="name">Account NO</label>
+        <input type="text" name="accountNo" class="form-control" [(ngModel)]="wallet.accountNo">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" class="form-control" [(ngModel)]="wallet.name">
+    </div>
+
+    <div class="form-group">
+        <label for="name">Money</label>
+        <input type="text" name="money" class="form-control" [(ngModel)]="wallet.money">
+    </div>
+
+    <button class="btn btn-dark btn-sm mt-4">Add Account</button>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">accountNo</th>
+            <th scope="col">name</th>
+            <th scope="col">money</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let wl of wallets">
+            <th scope="row">{{ wl.id }}</th>
+            <td>{{ wl.accountNo }}</td>
+            <td>{{ wl.name}}</td>
+            <td>{{ wl.money }}</td>
+            <td>
+                <button class="btn btn-danger btn-sm" (click)="deleteData(wl.id)">Delete</button>
+                <button class="btn btn-warning btn-sm mx-2" routerLink="edit/{{ wl.id }}">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
